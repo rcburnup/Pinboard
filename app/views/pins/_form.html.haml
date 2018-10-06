@@ -1,6 +1,6 @@
 = simple_form_for @pin, html: { multipart: true } do |f|
   - if @pin.errors.any?
-    #handle errors
+    
     %h2 
       = pluralize(@pin.errors.count, "error")
       kept this pin from saving.
@@ -8,7 +8,7 @@
         - @pin.errors.full_messages.each do |msg|
           %li = msg 
 
-  #render the form
+  
   .form-group
     = f.input :title, input_html: { class: 'form-control' }
     
