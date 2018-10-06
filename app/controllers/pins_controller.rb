@@ -2,7 +2,7 @@ class PinsController < ApplicationController
   before_action :find_pin, only: [:show, :edit, :update, :destroy]
 
   def index
-
+    @pins = Pin.all.order("created_at DESC")
   end
 
   def new
@@ -19,9 +19,21 @@ class PinsController < ApplicationController
     end
   end
 
-  def show
-
+  def update
+    if @pin.update(pin_params)
+      redirect_to @pin, notice: "Pin has been updated!"
+    else
+      render 'edit'
+    end
   end
+
+  def destroy
+    @pin.destroy
+    redirect_to root_path
+  end
+
+
+  
 
 
   private
