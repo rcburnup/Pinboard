@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(window).ready(function() {
 
   $('#pins').imagesLoaded(function() {
     $('#pins').masonry({
