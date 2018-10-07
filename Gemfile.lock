@@ -255,10 +255,14 @@ PLATFORMS
 DEPENDENCIES
   acts_as_votable (~> 0.11.1)
 <<<<<<< HEAD
+<<<<<<< HEAD
   aws-sdk (~> 2.6)
 =======
   aws-sdk-s3
 >>>>>>> bf0876a... Trying a different gem for AWS sdk
+=======
+  aws-sdk-s3
+>>>>>>> b7163af5439c48107aaf41fb0266f11d3eac3891
   bootsnap (>= 1.1.0)
   bootstrap-sass (~> 3.3, >= 3.3.7)
   byebug

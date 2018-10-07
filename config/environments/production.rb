@@ -1,18 +1,30 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+<<<<<<< HEAD
   # Paperclip config for aws s3
   config.paperclip_defaults = {
     storage: s3,
     preserve_files: true,
+=======
+  # paperclip upload to AWS S3
+  config.paperclip_defaults = {
+    storage: :s3,
+>>>>>>> b7163af5439c48107aaf41fb0266f11d3eac3891
     s3_credentials: {
       bucket: ENV.fetch('S3_BUCKET_NAME'),
       access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
       secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
+<<<<<<< HEAD
       sc_region: ENV.fetch('AWS_REGION')
     }
   }
 
+=======
+      s3_region: ENV.fetch('AWS_REGION'),
+    }
+  }
+>>>>>>> b7163af5439c48107aaf41fb0266f11d3eac3891
   # Code is not reloaded between requests.
   config.cache_classes = true
 

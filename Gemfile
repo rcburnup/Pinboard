@@ -71,11 +71,10 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Manually-added gems
-<<<<<<< HEAD
+
 gem 'pg', '~> 0.18'
-=======
+
 gem 'aws-sdk-s3'
->>>>>>> bf0876a... Trying a different gem for AWS sdk
 gem 'jquery-rails'
 gem 'haml', '~> 5.0', '>= 5.0.4'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
