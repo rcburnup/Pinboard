@@ -11,7 +11,7 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg', '~> 0.18'
+  
 end
 
 # Use Puma as the app server
@@ -71,6 +71,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Manually-added gems
+gem 'pg', '~> 0.18'
 gem 'jquery-rails'
 gem 'haml', '~> 5.0', '>= 5.0.4'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
