@@ -9,7 +9,7 @@
 %body
   %nav.navbar.navbar-default
     .container
-      .navbar-brand= link_to "Fat Cat Pinboard", root_path
+      .navbar-brand= link_to "Fat Cat Pinboard", root_path, method: :get
       .pull-right
         - if user_signed_in?
           %ul.nav.navbar-nav.navbar-right
