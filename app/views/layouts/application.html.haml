@@ -1,7 +1,7 @@
 !!! 5
 %html
 %head
-  %title Pin Board
+  %title Fat Cat Pinboard
   = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
   = javascript_include_tag 'application', 'data-turbolinks-track' => true
   = csrf_meta_tags
@@ -9,24 +9,26 @@
 %body
   %nav.navbar.navbar-default
     .container
-      .navbar-brand= link_to "Pinboard", root_path
+      .navbar-brand= link_to "Fat Cat Pinboard", root_path
+      .pull-right
+        - if user_signed_in?
+          %ul.nav.navbar-nav.navbar-right
+            %li= link_to "New", new_pin_path
+            %li= link_to "Account", edit_user_registration_path
+            %li= link_to "Log Out", destroy_user_session_path, method: :delete
+        - else
+          %ul.nav.navbar-nav.navbar-right
+            %li= link_to "Register", new_user_registration_path
+            %li= link_to "Log In", new_user_session_path
+
+  
+
+
   .container
-    - if user_signed_in?
-      %ul.nav.navbar-nav.navbar-right
-        %li= link_to "New", new_pin_path
-        %li= link_to "Profile", edit_user_registration_path
-        %li= link_to "Log Out", destroy_user_session_path, method: :delete
-    - else
-      %ul.nav.navbar-nav.navbar-right
-        %li= link_to "Register", new_user_registration_path
-        %li= link_to "Log In", new_user_session_path
+    - flash.each do |name, msg|
+      = content_tag :div, msg, class: "alert alert-info d-block"
 
-
-    .container
-      - flash.each do |name, msg|
-        = content_tag :div, msg, class: "alert alert-info d-block"
-
-    .container
-      = yield
+  .container
+    = yield
 
     
