@@ -247,7 +247,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts_as_votable (~> 0.11.1)
-  aws-sdk (~> 2.3)
+  aws-sdk (~> 2.6)
   bootsnap (>= 1.1.0)
   bootstrap-sass (~> 3.3, >= 3.3.7)
   byebug
